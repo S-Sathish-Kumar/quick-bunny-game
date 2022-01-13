@@ -28,7 +28,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1500, 1000);
+  createCanvas(1500, 900);
   bg = createSprite(750, 500);
   bg.addImage(bgImage);
   bg.scale = 8;
