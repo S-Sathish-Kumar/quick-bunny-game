@@ -28,7 +28,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1200, 800);
+  createCanvas(1200, 700);
   bg = createSprite(750, 500);
   bg.addImage(bgImage);
   bg.scale = 8;
@@ -37,7 +37,7 @@ function setup() {
 
   edges = createEdgeSprites();
 
-  player = createSprite(50, 750, 15, 15);
+  player = createSprite(50, 650, 15, 15);
   player.addImage(playerImage);
   player.scale = 0.4;
   player.shapeColor = "white";
@@ -46,7 +46,7 @@ function setup() {
   target.shapeColor = "pink";
   target.addImage(targetImage);
   target.scale = 0.3;
-
+             
   obstacle1 = createSprite(0, 350, 160, 20);
   obstacle2 = createSprite(300, 350, 160, 20);
   obstacle3 = createSprite(600, 350, 160, 20);
@@ -100,7 +100,7 @@ function draw() {
     var temp = snakeGroup.get(i);
     if (player.isTouching(temp)) {
       player.x = 50;
-      player.y = 750;
+      player.y = 650;
     }
   }
 
@@ -108,67 +108,67 @@ function draw() {
     text("You Lose", 200, 200);
     obstacle1.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle2)) {
     text("You Lose", 200, 200);
     obstacle2.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle3)) {
     text("You Lose", 200, 200);
     obstacle3.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle4)) {
     text("You Lose", 200, 200);
     obstacle4.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle5)) {
     text("You Lose", 200, 200);
     obstacle5.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle6)) {
     text("You Lose", 200, 200);
     obstacle6.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle7)) {
     text("You Lose", 200, 200);
     obstacle7.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle8)) {
     text("You Lose", 200, 200);
     obstacle7.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle9)) {
     text("You Lose", 200, 200);
     obstacle7.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle10)) {
     text("You Lose", 200, 200);
     obstacle7.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(obstacle11)) {
     text("You Lose", 200, 200);
     obstacle7.velocityX = 0;
     player.x = 50;
-    player.y = 750;
+    player.y = 650;
   }
   if (player.isTouching(target)) {
     text("You Won", 100, 200);
@@ -184,14 +184,14 @@ function generateSnakes() {
     snake = createSprite(
       random(50, 950),
       random(50, 350),
-      random(5, 10),
-      random(5, 10)
+      random(8, 10),
+      random(8, 10)
     );
     snake2 = createSprite(
       random(150, 950),
       random(550, 800),
-      random(4, 10),
-      random(5, 10)
+      random(8, 10),
+      random(8, 10)
     );
     snake.addImage(snakeImage);
     snake2.addImage(snakeImage);
